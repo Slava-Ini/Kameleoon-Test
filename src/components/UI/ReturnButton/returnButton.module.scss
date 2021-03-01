@@ -1,0 +1,34 @@
+@import '../../../sassStyles/variables';
+@import '../../../sassStyles/mixins';
+
+.return-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: none;
+	margin-left: 5%;
+	align-self: flex-start;
+	width: 70px;
+	height: 25px;
+	outline: none;
+	cursor: pointer;
+
+	&:focus {
+		border: 1px solid lightgray;
+	}
+
+	@include mobile {
+		align-self: center;
+	}
+}
+
+.return-image {
+	height: 22px;
+}
+
+.return-link {
+	font-family: $return-font;
+	font-weight: 700;
+	font-size: 18px;
+}

@@ -1,0 +1,47 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/mixins';
+
+%align {
+	font-family: $heading-font;
+	margin-left: 5%;
+	align-self: flex-start;
+
+	@include mobile {
+		margin-left: 0;
+	}
+}
+
+.finalize-wrapper {
+	background-color: $page-background-color;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 20px;
+	width: 100%;
+	margin-top: 4%;
+}
+
+.finalize-heading {
+	@extend %align;
+	font-weight: 700;
+	font-size: 35px;
+	color: $header-font-color;
+
+	@include mobile {
+		align-self: center;
+		margin-left: 0;
+		font-size: 28px;
+	}
+}
+.finalize-name {
+	@extend %align;
+	margin-top: 20px;
+	font-weight: 600;
+	height: 75vh;
+
+	@include mobile {
+		align-self: center;
+		height: 80vh;
+	}
+}

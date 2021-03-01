@@ -1,0 +1,105 @@
+@import '../../../sassStyles/variables';
+@import '../../../sassStyles/mixins';
+
+.test-wrapper {
+	background: white;
+	display: flex;
+	flex-direction: row;
+	align-self: flex-start;
+	align-items: center;
+	margin-left: 5%;
+	margin-top: 10px;
+	width: 90%;
+	height: 5.5rem;	
+	border-radius: $bar-radius;
+	transition: box-shadow 0.1s ease-out;
+	
+	&:hover {
+		box-shadow: $bar-shadow;
+	}
+}	
+
+.market-site {
+	border-left: $market-site;
+}
+
+.delivery-site {
+	border-left: $delivery-site;
+}
+
+.games-site {
+	border-left: $games-site;
+}
+
+.test-name {
+	font-family: $primary-font;
+	font-weight: 600;
+	color: $name-font-color;
+	font-size: 16px;
+	padding-left: 20px;
+	width: 45%;
+
+	@include mobile {
+		width: 30%;
+		font-size: 14px;
+	}
+
+}
+
+.test-type, .test-status {
+	width: 12%;
+	font-family: $primary-font;
+
+	@include mobile {
+		width: 14%;
+		font-size: 12px;
+		margin-left: 10px;
+		word-wrap: break-word;
+	}
+}
+
+.test-type {
+	font-weight: 400;
+	color: $type-font-color;
+}
+
+.test-status {
+	font-weight: 600;
+}
+
+.test-site {
+	width: 18%;
+	color: $type-font-color;
+	word-wrap: break-word;
+	overflow: hidden;
+
+	@include mobile {
+		width: 20%;
+		font-size: 14px;
+		margin-left: 10px;
+	}
+}
+
+.test-button-wrapper {
+	width: 13%;
+	display: flex;
+	justify-content: center;
+
+	@include mobile {
+		width: 15%;
+		margin-left: 10px;
+	}
+}
+
+.online {
+	color: $status-online;
+}
+.paused {
+	color: $status-paused;
+}
+.draft {
+	color: $status-draft;
+}
+.stopped {
+	color: $status-stopped;
+}

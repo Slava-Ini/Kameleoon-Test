@@ -1,0 +1,59 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/mixins';
+
+.dashboard-wrapper {
+	background-color: $page-background-color;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 20px;
+	width: 100%;
+	margin-top: 4%;
+}
+
+.dashboard {
+	font-family: $heading-font;
+	font-weight: 700;
+	font-size: 35px;
+	color: $header-font-color;
+	margin-left: 5%;
+	align-self: flex-start;
+
+	@include mobile {
+		align-self: center;
+		margin-left: 0;
+		font-size: 28px;
+	}
+}
+
+.loader {
+	font-family: $primary-font;
+	font-size: 25px;
+	color: $type-font-color;
+	text-align: center;
+	margin-top: 10%;
+}
+
+.nomatch-wrapper {
+	width: 50%;
+	height: 240px;
+	margin-top: 8%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.nomatch-message {
+	font-family: $heading-font;
+	font-weight: 500;
+	font-size: 24px;
+	margin-bottom: 10%;
+	text-align: center;
+
+	@include mobile {
+		font-size: 18px;
+	}
+}
+

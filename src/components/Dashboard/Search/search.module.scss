@@ -1,0 +1,60 @@
+@import '../../../sassStyles/variables';
+@import '../../../sassStyles/mixins';
+
+.search-wrapper {
+	position: relative;
+	align-self: flex-start;
+	margin-left: 5%;
+	margin-top: 4%;
+	padding-right: 10px;
+	width: 90%;
+	height: 3.5rem;	
+}
+
+.search {
+	font-family: $primary-font;
+	font-weight: 400;
+	font-size: 18px;
+	outline: none;
+	color: $search-text-font-color;
+	border: $search-border;
+	border-radius: $search-radius;	
+	width: 100%;
+	height: 100%;
+	background-image: url('../../../images/Zoom.svg');
+	background-repeat: no-repeat;
+	background-size: 18px;
+	background-position: 15px;
+	padding-left: 50px;
+
+	@include mobile {
+		height: 80%;
+	}
+}
+
+// Search placeholder
+::-webkit-input-placeholder {
+	color:$search-placeholder-font-color;
+	font-family: $primary-font;
+	font-weight: 400;
+	font-size: 20px;
+
+	@include mobile {
+		font-size: 13px;
+	}
+}
+
+.search-test-number {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-family: $primary-font;
+	font-weight: 400;
+	font-size: 18px;
+	color: $search-placeholder-font-color;
+
+	@include mobile {
+		font-size: 13px;
+		top: 18px;
+	}
+}

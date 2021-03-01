@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GlobalContextProvider from './context/GlobalContext';
+import { Redirect, Route, Switch, withRouter } from 'react-router';
+import Dashboard from './components/Dashboard/Dashboard';
+import Finalize from './components/Finalize/Finalize';
+import Results from './components/Results/Results';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// GlobalContextProvider serves state and dispatch like redux does
+function App(): JSX.Element {
+	return (
+		<GlobalContextProvider>
+			<Switch>
+				<Route exact path='/dashboard'>
+					<Dashboard />
+				</Route>
+				<Route exact path='/results/:testId'>
+					<Results />
+				</Route>
+				<Route exact path='/finalize/:testId'>
+					<Finalize />
+				</Route> 
+				<Redirect to='/dashboard'/>
+			</Switch>
+		</GlobalContextProvider>
+	);
 }
 
-export default App;
+export default withRouter(App);

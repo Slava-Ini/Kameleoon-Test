@@ -1,0 +1,41 @@
+@import '../../../sassStyles/variables';
+@import '../../../sassStyles/mixins';
+
+.button {
+	width: 125px;
+	height: 40px;
+	border-radius: $button-radius;
+	font-family: $heading-font;
+	font-weight: 600;
+	color: white;
+	cursor: pointer;
+	outline: none;
+
+	&:active {
+		border: $search-border;
+	}
+
+	p {
+		@include mobile {
+			font-size: 10px;
+		}
+	}
+
+	@include tablet {
+		width: 80px;
+	}
+
+	@include mobile {
+		height: 30px;
+		border-radius: $button-radius - 5px;	
+	}
+
+}
+
+.button-green {
+	background: $button-green;
+}
+
+.button-gray {
+	background: $button-gray;
+}
